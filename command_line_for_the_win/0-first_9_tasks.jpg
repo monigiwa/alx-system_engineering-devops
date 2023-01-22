@@ -1,0 +1,6 @@
+#!/bin/bash
+ 
+ARCHIVE=$(awk '/^__ARCHIVE_BELOW__/{print NR + 1;exit;0;}' $0)
+tail -n+$ARCHIVE $0 > first9.jpg
+exit
+__ARCHIVE_BELOW__
